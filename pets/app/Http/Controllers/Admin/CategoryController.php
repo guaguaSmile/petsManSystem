@@ -10,11 +10,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-class VarietiesController extends Controller
+class CategoryController extends Controller
 {
     public function index()
     {
-        return view('admin.pets.index');
+        return view('admin.category.index');
     }
 
     public function store()

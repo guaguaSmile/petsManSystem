@@ -13,9 +13,27 @@ use Illuminate\Database\Eloquent\Model;
 class Pets extends Model
 {
     protected $table = 'pets';
-    protected $fillable = ['name', 'gender', 'varieties', 'colour'];
+    protected $fillable = ['name', 'user_ id', 'gender', 'category_id', 'colour'];
 
     protected $hidden = ['updated_at'];
     public $timestamps = true;
-    protected $dateFormat = 'U';
+//    protected $dateFormat = 'U';
+
+
+    public function category()
+    {
+        return $this->belongsTo('App\Model\Category')
+            ->where('pid', null);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Model\User', 'user_id', 'id');
+
+    }
+
+    public function treatment()
+    {
+        return $this->hasMany('App\Model\TreatmentRecord', 'id', 'pets_id');
+    }
 }

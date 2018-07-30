@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});*/
+
+Route::group(['namespace' => 'Api'], function () {
+
+//    Route::group([], function () {
+        Route::get('user', 'UserController@getData');
+    Route::get('pets', 'PetsController@getData');
+    Route::get('category', 'CategoryController@getData');
+
+//    });
 });

@@ -17,7 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'admin','middleware' =>['auth']], function(Router $router) {
+//Route::group(['prefix'=>'admin','middleware' =>['auth']], function() {
+Route::group(['prefix'=>'admin', 'namespace' => 'Admin'], function() {
+    // 用户CURD
+    Router::get('user', 'UserController@index')->name('admin.user.index');
+    Router::post('user/store', 'UserController@store')->name('admin.user.store');
+    Router::get('user/{id}/edit', 'UserController@edit')->name('admin.user.edit');
+    Router::delete('user/delete', 'UserController@delete')->name('admin.user.delete');
     // 宠物CURD
     Router::get('pets', 'PetsController@index')->name('admin.pets.index');
     Router::post('pets/store', 'PetsController@store')->name('admin.pets.store');
@@ -28,8 +34,8 @@ Route::group(['prefix'=>'admin','middleware' =>['auth']], function(Router $route
     Router::post('pets/treatment/store', 'TreatmentController@store')->name('admin.pets.treatment.store');
     Router::post('pets/{id}/treatment/edit', 'TreatmentController@edit')->name('admin.pets.treatment.edit');
     // 宠物品种CURD
-    Router::get('pets/varieties', 'VarietiesController@index')->name('admin.pets.varieties.index');
-    Router::post('pets/varieties/store', 'VarietiesController@store')->name('admin.pets.varieties.store');
-    Router::post('pets/{id}/varieties/edit', 'VarietiesController@edit')->name('admin.pets.varieties.edit');
+    Router::get('category', 'CategoryController@index')->name('admin.pets.category.index');
+    Router::post('pets/category/store', 'CategoryController@store')->name('admin.pets.category.store');
+    Router::post('pets/{id}/category/edit', 'CategoryController@edit')->name('admin.pets.category.edit');
 
 });

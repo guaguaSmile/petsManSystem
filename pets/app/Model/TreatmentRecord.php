@@ -17,5 +17,5 @@ class TreatmentRecord extends Model
 
     protected $hidden = ['updated_at'];
     public $timestamps = true;
-    protected $dateFormat = 'U';
+//    protected $dateFormat = 'U';
 }

@@ -10,12 +10,12 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Varieties extends Model
+class Category extends Model
 {
-    protected $table = 'varieties';
-    protected $fillable = ['name', 'pid'];
+    protected $table = 'category';
+    protected $fillable = ['name', 'pid', 'created_at'];
 
     protected $hidden = ['updated_at'];
     public $timestamps = true;
-    protected $dateFormat = 'U';
+//    protected $dateFormat = 'U';
 }

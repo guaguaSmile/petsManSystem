@@ -9,9 +9,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\Pets;
+use App\Model\Category;
+use Illuminate\Http\Request;
 
 class PetsController extends Controller
 {
+    private $request;
+    private $petsModel;
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+        $this->petsModel = new Pets();
+    }
+
     public function index()
     {
         return view('admin.pets.index');

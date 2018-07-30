@@ -14,7 +14,7 @@ CREATE TABLE `pets` (
   `name` varchar(100) NOT NULL DEFAULT '' COMMENT '宠物名',
   `gender` tinyint(1) DEFAULT NULL COMMENT '性别，1:公，2:母',
   `colour` varchar(100) DEFAULT NULL COMMENT '颜色',
-  `varieties_id` int(11) DEFAULT NULL COMMENT '品种',
+  `category_id` int(11) DEFAULT NULL COMMENT '品种',
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)

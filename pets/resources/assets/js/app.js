@@ -16,6 +16,13 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('header-cop', require('./components/common/HeaderCop.vue'));
+Vue.component('siderbar', require('./components/common/SiderBar.vue'));
+Vue.component('footer-cop', require('./components/common/Footer.vue'));
+Vue.component('page', require('./components/common/PageNavigation.vue'));
+Vue.component('pets-index', require('./components/pets/index.vue'));
+Vue.component('user-info', require('./components/user/Index.vue'));
+Vue.component('category', require('./components/category/Index.vue'));
 
 const app = new Vue({
     el: '#app'
