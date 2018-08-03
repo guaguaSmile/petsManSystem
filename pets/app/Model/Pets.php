@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pets extends Model
 {
     protected $table = 'pets';
-    protected $fillable = ['name', 'user_ id', 'gender', 'category_id', 'colour'];
+    protected $fillable = ['name', 'user_id', 'gender', 'category_id', 'color', 'treatment_record_id'];
 
     protected $hidden = ['updated_at'];
     public $timestamps = true;

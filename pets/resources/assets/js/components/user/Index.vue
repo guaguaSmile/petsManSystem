@@ -22,9 +22,8 @@
                 </td>
             </tr>
             </tbody>
-            <page></page>
         </table>
-
+        <page></page>
     </div>
 </template>
 

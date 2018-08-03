@@ -30,7 +30,12 @@ class PetsController extends Controller
 
     public function store()
     {
+        return view('admin.pets.store');
+    }
 
+    public function detail()
+    {
+        return view('admin.pets.detail');
     }
 
     public function edit(int $id)

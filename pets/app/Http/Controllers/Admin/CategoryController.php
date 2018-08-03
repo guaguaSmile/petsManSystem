@@ -19,7 +19,7 @@ class CategoryController extends Controller
 
     public function store()
     {
-
+        return view('admin.category.store');
     }
 
     public function edit(int $id)

@@ -18,4 +18,9 @@ class Category extends Model
     protected $hidden = ['updated_at'];
     public $timestamps = true;
 //    protected $dateFormat = 'U';
+
+    public function getCategory()
+    {
+        return $this->where('pid', null)->get();
+    }
 }

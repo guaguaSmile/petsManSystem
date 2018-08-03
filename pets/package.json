@@ -20,6 +20,8 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "materialize-css": "^1.0.0-rc.2"
+        "materialize-css": "^1.0.0-rc.2",
+        "vue-bootstrap-datetimepicker": "^4.1.4",
+        "vue-router": "^3.0.1"
     }
 }

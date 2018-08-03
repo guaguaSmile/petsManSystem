@@ -32,4 +32,46 @@ class CategoryController extends Controller
 
         return response()->json(['data' => $categorys]);
     }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function store()
+    {
+        // 获取pid=null的分类
+        if ($this->request->isMethod('get')) {
+            $categorys = $this->categoryModel->getCategory();
+            return response()->json(['code'=>0, 'data'=> $categorys, 'msg'=>'']);
+        }
+        $name = $this->request->input('name');
+        $pid = $this->request->input('pid');
+        if (!$name) {
+            return response()->json(['code'=>1, 'data'=>[], 'msg'=>'请填写分类名']);
+        }
+        $time = date('Y-m-d H:i:s');
+        $this->categoryModel->name = $name;
+        $this->categoryModel->pid = $pid ? : null;
+        $this->categoryModel->created_at = $time;
+        $this->categoryModel->updated_at = $time;
+        if (!$this->categoryModel->save()) {
+            return response()->json(['code'=>1, 'data'=>[], 'msg'=>'程序异常']);
+        }
+
+        return response()->json(['code'=>0, 'data'=>[], 'msg'=>'']);
+    }
+
+    public function edit(int $id)
+    {
+
+    }
+
+    public function delete(int $id)
+    {
+        $num = $this->categoryModel->destroy($id);
+        if (!$num) {
+            return response()->json(['code'=>1, 'data'=>[], 'msg'=>'删除失败']);
+        }
+
+        return response()->json(['code'=>0, 'data'=>[], 'msg'=>'']);
+    }
 }
