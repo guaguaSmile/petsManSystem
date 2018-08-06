@@ -19,6 +19,7 @@
 <script>
     export default {
         name: 'login',
+        is_login: false,
         data() {
             return {
                 form: {
@@ -43,6 +44,7 @@
                         if (code !== 0) {
                             alert(msg);
                         }
+                        self.is_login = true;
                         self.$router.push({name: 'pets'})
                     })
 

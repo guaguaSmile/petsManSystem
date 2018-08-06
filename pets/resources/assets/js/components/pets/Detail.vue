@@ -10,7 +10,6 @@
                 <th>颜色</th>
                 <th>公母</th>
                 <th>用户</th>
-                <th>上次治疗时间</th>
                 <th>创建时间</th>
             </tr>
             </thead>
@@ -22,7 +21,6 @@
                 <td>{{ pet.color }}</td>
                 <td>{{ pet.gender }}</td>
                 <td>{{ pet.user }}</td>
-                <td> xx</td>
                 <td>{{ pet.created_at }}</td>
             </tr>
             </tbody>
@@ -32,25 +30,23 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>宠物名</th>
-                <th>分类</th>
-                <th>颜色</th>
-                <th>公母</th>
-                <th>用户</th>
-                <th>上次治疗时间</th>
+                <th>治疗时间</th>
+                <th>下次治疗时间</th>
+                <th>治疗内容</th>
                 <th>创建时间</th>
+                <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">{{ pet.id}}</th>
-                <td>{{ pet.name}}</td>
-                <td>{{ pet.category }}</td>
-                <td>{{ pet.color }}</td>
-                <td>{{ pet.gender }}</td>
-                <td>{{ pet.user }}</td>
-                <td> xx</td>
-                <td>{{ pet.created_at }}</td>
+            <tr v-for="treatment in treatments">
+                <td>{{ treatment.id}}</td>
+                <td>{{ treatment.treatment_time }}</td>
+                <td>{{ treatment.next_treatment_time }}</td>
+                <td>{{ treatment.content }}</td>
+                <td>{{ treatment.created_at }}</td>
+                <td>
+                    <button class="btn btn-warning" @click="_deleteTreatment(treatment.id)">删除</button>
+                </td>
             </tr>
             </tbody>
         </table>
@@ -62,18 +58,41 @@
         data() {
             return {
                 pet: {},
-                treatment: []
+                treatments: []
             }
         },
         created() {
-
+            this._fetchData()
         },
         mounted() {
-            this.init()
+
         },
         methods: {
-            init() {
+            _fetchData() {
+                fetch('/api/pets/'+this.$route.params.id+'/detail')
+                    .then(res => res.json())
+                    .then(res => {
+                        this.pet = res.data.pet
+                        this.treatments = res.data.pet.treatments
+                    })
+            },
+            _deleteTreatment(id) {
+                var self = this;
+                axios.post('/api/treatment/'+id+'/delete')
+                    .then(function(response) {
+                        var code = response.code;
+                        var msg = response.msg;
+                        if (code !== 0) {
+                            return alert(msg);
+                        }
+                        alert('删除成功');
+                        setTimeout(() => {
+                            self.$router.push({name: 'petsDetail', params: {id: id}})
+                        }, 0)
+                    })
+                    .catch(function (e) {
 
+                    })
             }
         }
     }

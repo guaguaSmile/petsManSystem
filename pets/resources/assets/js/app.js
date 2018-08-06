@@ -34,6 +34,7 @@ Vue.component('headcom', require('./components/common/HeadCom.vue'));
 Vue.component('footerCom', require('./components/common/FooterCom.vue'));
 Vue.component('page', require('./components/common/PageNavigation.vue'));
 Vue.component('siderBar', require('./components/common/SiderBar.vue'));
+// Vue.component('category', require('./components/common/SiderBar.vue'));
 
 const app = new Vue({
     el: '#app',

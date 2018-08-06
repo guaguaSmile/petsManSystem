@@ -22,17 +22,23 @@ Route::group(['namespace' => 'Api'], function () {
     Route::post('login', 'LoginController@login');
     Route::post('logout', 'LoginController@logout');
 //    Route::group([], function () {
+
     Route::get('user', 'UserController@getData');
+    Route::post('user/{id}/delete', 'UserController@delete');
+    // 宠物
     Route::get('pets', 'PetsController@getData');
     Route::get('pets/{id}/detail', 'PetsController@detail');
     Route::post('pets', 'PetsController@store');
     Route::post('pets/{id}/delete', 'PetsController@delete');
     Route::match(['get', 'post'], 'pets/{id}/edit', 'PetsController@edit');
-
+    // 分类
     Route::get('category', 'CategoryController@getData');
     Route::match(['get', 'post'], 'category/store', 'CategoryController@store');
     Route::post('category/{id}/delete', 'CategoryController@delete');
     Route::post('category/{id}/edit', 'CategoryController@edit');
+    // 治疗记录
+    Route::post('treatment', 'TreatmentRecordController@store');
+    Route::post('treatment/{id}/delete', 'TreatmentRecordController@delete');
 
 //    });
 });

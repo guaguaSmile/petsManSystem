@@ -1,9 +1,9 @@
 <template>
     <div class="content-right col-10">
-        <div class="row" style="padding: 10px 15px;">
+        <div class="row"  style="margin: 10px 0px">
             <a class="btn btn-primary" href="javascript:;" id="btn-storePets" @click="_showStoreCategoryModal">添加</a>
-            <input type="text" class="input" id="exampleInputName2" placeholder="分类名" style="margin: 0px 10px;">
-            <button type="submit" class="btn btn-primary">搜索</button>
+            <input type="text" v-model="keyword" class="input" id="exampleInputName2" placeholder="分类名" style="margin: 0px 10px;">
+            <button type="submit" class="btn btn-primary" @click="_searchData">搜索</button>
         </div>
         <table class="table table-bordered">
             <thead>
@@ -23,13 +23,13 @@
                 <td>{{ mcate.created_at }}</td>
                 <td>
                     <a href="#" class="btn btn-primary">修改</a>
-                    <a href="#" class="btn btn-primary" @click="_delete(mcate.id)">删除</a>
+                    <a href="javascript:;" class="btn btn-primary" @click="_delete(mcate.id)">删除</a>
                 </td>
             </tr>
             </tbody>
         </table>
         <page></page>
-        <div class="modal fade" id="storeCategoryModal" tabindex="-1" role="dialog">
+        <div class="modal" id="storeCategoryModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -62,6 +62,7 @@
 </template>
 
 <script>
+    import $ from "jquery";
     export default {
         data() {
             return {
@@ -70,7 +71,8 @@
                 form: {         // 添加分类
                     name: '',
                     pid: ''
-                }
+                },
+                keyword: '',
             }
         },
         created() {
@@ -88,7 +90,7 @@
             },
             _showStoreCategoryModal() {
                 $('#storeCategoryModal').modal() // jquery 显示modal
-                fetch('api/category/store')
+                fetch('/api/category/store')
                     .then(res => res.json())
                     .then(res => {
                         this.tcategorys = res.data

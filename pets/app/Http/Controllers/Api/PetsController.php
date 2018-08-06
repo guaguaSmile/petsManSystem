@@ -33,6 +33,11 @@ class PetsController extends Controller
         $query = Pets::query();
         $hasKeyword = $this->request->has('keyword');
         $hasCategory = $this->request->has('category');
+        $page = $this->request->input('page');
+        $page = is_numeric($page) ? $page : 0;
+        $limit = 10;
+        $skip = ($page -1 > 0) ? ($page -1)*$limit : 0;
+
         if ($hasKeyword) {
             $keyword = $this->request->input('keyword');
             $query->where('name', 'like', '%' . $keyword . '%')
@@ -45,10 +50,13 @@ class PetsController extends Controller
             }]);
         }
         $category = Category::all();
-        $pets = $query->with(['treatment'])->get();
+        $pets = $query->with(['treatment'])->skip($skip)->limit($limit)->get();
+        $count = ceil($query->count()/$limit);
+        $count = ($count <= 0)? 1 : $count;
         return response()->json([
             'pets' => $pets,
             'category' => $category,
+            'count' => $count,
         ]);
     }
 
@@ -105,23 +113,21 @@ class PetsController extends Controller
 
     public function detail(int $id)
     {
-        $pet = $this->petsModel->find($id);
+        $pet = $this->petsModel->with(['treatments'])->find($id);
         if (!$pet) {
             return response()->json(['code' => 1, 'data' => [], 'msg' => '非法请求']);
         }
-        $treatmentRecord = (new TreatmentRecord())->getDataByPetID($id);
 
-        return response()->json(['code' => 0, 'data' => [
-            'pet' => $pet,
-            'treatmentRecord' => $treatmentRecord
-        ], 'msg'=>'']);
+        return response()->json(['code' => 0, 'data' => ['pet' => $pet], 'msg'=>'']);
     }
 
     public function edit($id)
     {
+//        print_r($id);
+//        print_r($this->request->all());die;
         $pet = $this->petsModel->find($id);
         if (!$pet) {
-            return response()->json(['code'=>0, 'data'=>[], 'msg'=>'非法请求']);
+            return response()->json(['code'=>1, 'data'=>[], 'msg'=>'非法请求']);
         }
         // 获取治疗信息
         $treatomentRecord = (new TreatmentRecord())->getOneByPetsId($pet->id);
@@ -143,16 +149,19 @@ class PetsController extends Controller
         $pet->color = $this->request->input('color');
         $pet->user = $this->request->input('user');
         $pet->gender = $this->request->input('gender');
-        $pet->udpated_at = $time;
+        $pet->updated_at = $time;
 
         $treatomentRecord->next_treatment_time = $this->request->input('next_treatment_time');
         $treatomentRecord->treatment_time = $this->request->input('treatment_time');
         $treatomentRecord->content = $this->request->input('content');
+        $treatomentRecord->updated_at = $time;
         DB::beginTransaction();
         try {
             $pet->save();
             $treatomentRecord->save();
+            DB::commit();
         } catch (Exception $e) {
+            DB::rollBack();
             Log::error('更新宠物信息失败', [$e->getFile(), $e->getLine(), $e->getMessage()]);
             return response()->json(['code'=>1, 'data'=>[], 'msg'=>'程序异常']);
         }
@@ -163,7 +172,8 @@ class PetsController extends Controller
     public function delete(int $id)
     {
         $num = $this->petsModel->destroy($id);
-        if (!$num) {
+        $num1 = (new TreatmentRecord())->where('pets_id', $id)->delete();
+        if (!$num || !$num1) {
             return response()->json(['code'=>1, 'data'=>[], 'msg'=>'删除失败']);
         }
         return response()->json(['code'=>0, 'data'=>[], 'msg'=>'']);

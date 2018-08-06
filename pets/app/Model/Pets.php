@@ -32,8 +32,14 @@ class Pets extends Model
 
     }
 
+    public function treatments()
+    {
+        return $this->hasMany('App\Model\TreatmentRecord', 'pets_id', 'id');
+    }
+
     public function treatment()
     {
-        return $this->hasMany('App\Model\TreatmentRecord', 'id', 'pets_id');
+        return $this->belongsTo('App\Model\TreatmentRecord', 'id', 'pets_id')->orderBy('id', 'DESC');
     }
 }
+

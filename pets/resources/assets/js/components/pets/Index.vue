@@ -1,9 +1,9 @@
 <template>
     <div class="content-right col-10">
-        <div class="row" style="padding: 10px 15px;">
+        <div class="row" style="margin: 10px 0px">
             <a class="btn btn-primary" id="btn-storePets" @click="_showStorePetsModal">添加</a>
-            <input type="text" class="input" id="exampleInputName2" placeholder="宠物名，用户名" style="margin: 0px 10px;">
-            <button type="submit" class="btn btn-primary">搜索</button>
+            <input type="text" v-model="keyword" class="input" id="exampleInputName2" placeholder="宠物名，用户名" style="margin: 0px 10px;">
+            <button type="submit" class="btn btn-primary" @click="_fetchData(1, keyword)">搜索</button>
         </div>
         <table class="table table-bordered">
             <thead>
@@ -27,7 +27,7 @@
                 <td>{{ pet.color }}</td>
                 <td>{{ pet.gender }}</td>
                 <td>{{ pet.user }}</td>
-                <td> xx</td>
+                <td>{{ pet.treatment.treatment_time }}</td>
                 <td>{{ pet.created_at }}</td>
                 <td>
                     <router-link :to="`pets/${pet.id}/edit`" class="btn btn-primary">修改</router-link>
@@ -37,8 +37,8 @@
             </tr>
             </tbody>
         </table>
-        <page></page>
-        <div class="modal fade" id="storePetsModal" tabindex="-1" role="dialog">
+        <page v-bind:count="count" v-bind:api="api" v-on:_fetch-data="_fetchData"></page>
+        <div class="modal" id="storePetsModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -101,10 +101,10 @@
 <script>
     import $ from "jquery";
     import datePicker from 'vue-bootstrap-datetimepicker';
+    import page from '../common/PageNavigation.vue';
     export default {
         name: "pets",
         props: {
-            id: 1
         },
         data() {
             return {
@@ -122,7 +122,10 @@
                     next_treatment_time: new Date(),
                     treatment_time: new Date(),
                     content: '',
-                }
+                },
+                count: null,
+                api: 'pets',
+                keyword: '',
             }
         },
         created() {
@@ -135,13 +138,33 @@
 
         },
         methods: {
-            _fetchData() {
-                fetch('api/pets')
-                    .then(res => res.json())
+            testD() {
+//                console.log(111)
+            },
+            _fetchData(page, keyword) {
+                var flag = 0;
+                var api = '/api/pets';
+//                formData.append('page', page);
+                if (page && page !== 'undefined') {
+                    api += '?page=' + page;
+                    flag++;
+                }
+                if (keyword) {
+                    if (flag >=1) {
+                        api += '&keyword='+keyword;
+                    } else {
+                        api += '?keyword='+keyword;
+                    }
+                }
+                fetch(api).then(res => res.json())
                     .then(res => {
-                        this.pets = res.pets
-                        this.category = res.category
+                        console.log(this)
+                        console.log(self);
+                        this.$data.pets = res.pets
+                        this.$data.category = res.category
+                        this.$data.count = res.count
                     })
+//                console.log(this)
             },
             _showStorePetsModal() {
                 $('#storePetsModal').modal()
@@ -168,12 +191,12 @@
                 if (!this.form.content) {
                     return alert('请填写内容');
                 }
-                axios.post('pets', this.form)
+                axios.post('/api/pets', this.form)
                     .then(function(response) {
                         var code = response.code;
                         var msg = response.msg;
                         if (code !== 0) {
-                            alert(msg);
+                            return alert(msg);
                         }
                         alert('添加成功');
                         setTimeout(() => {
@@ -185,7 +208,7 @@
                     })
             },
             _deletePet(id) {
-                var api = 'api/pets/'+id+'/delete';
+                var api = '/api/pets/'+id+'/delete';
                 axios.post(api,{}).then(function (response) {
                     var code = response.code;
                     var msg = response.msg;
@@ -203,7 +226,8 @@
             }
         },
         components: {
-            datePicker
+            datePicker,
+            page
         }
     }
 </script>

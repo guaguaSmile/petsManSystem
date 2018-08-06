@@ -33,4 +33,13 @@ class UserController extends Controller
 //        print_r(DB::getQueryLog());die;
         return response()->json(['data'=> $users->toArray()]);
     }
+
+    public function delete($id)
+    {
+        if ($this->userModel->destroy(intval($id))) {
+            return response()->json(['code' => 0, 'data'=> [], 'msg'=> '']);
+        }
+
+        return response()->json(['code' => 1, 'data'=> [], 'msg'=> '程序异常']);
+    }
 }

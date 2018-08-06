@@ -2,48 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e479692-fff4-41ef-badd-759a98de12c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/common/Alert.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/login/Index.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Store.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/router/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/router/routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/resources/assets/js/vendor/jquery-3.3.1.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/ExampleComponent.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pets/resources/views/admin/category/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pets/resources/views/admin/login/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pets/resources/views/admin/pets/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pets/resources/views/admin/user/edit.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pets/resources/views/admin/user/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pets/resources/views/welcome.blade.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/common/Footer.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/common/FooterCom.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/common/HeaderCop.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/common/HeadCom.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pets/resources/views/admin/pets/edit.blade.php" afterPath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/LoginController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/TreatmentRecordController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Http/Controllers/Admin/CategoryController.php" afterPath="$PROJECT_DIR$/pets/app/Http/Controllers/Admin/CategoryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Http/Controllers/Admin/PetsController.php" afterPath="$PROJECT_DIR$/pets/app/Http/Controllers/Admin/PetsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/CategoryController.php" afterPath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/CategoryController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/PetsController.php" afterPath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/PetsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Model/Category.php" afterPath="$PROJECT_DIR$/pets/app/Model/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/UserController.php" afterPath="$PROJECT_DIR$/pets/app/Http/Controllers/Api/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Model/Pets.php" afterPath="$PROJECT_DIR$/pets/app/Model/Pets.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Model/TreatmentRecord.php" afterPath="$PROJECT_DIR$/pets/app/Model/TreatmentRecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Model/User.php" afterPath="$PROJECT_DIR$/pets/app/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/pets/app/Providers/RouteServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/config/app.php" afterPath="$PROJECT_DIR$/pets/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/package-lock.json" afterPath="$PROJECT_DIR$/pets/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/package.json" afterPath="$PROJECT_DIR$/pets/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/public/js/app.js" afterPath="$PROJECT_DIR$/pets/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/pets/resources/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/bootstrap.js" afterPath="$PROJECT_DIR$/pets/resources/assets/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/category/Index.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/category/Index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/common/FooterCom.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/common/FooterCom.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/common/HeadCom.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/common/HeadCom.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/common/PageNavigation.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/common/PageNavigation.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/login/Index.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/login/Index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/components/user/Index.vue" afterPath="$PROJECT_DIR$/pets/resources/assets/js/components/user/Index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/views/admin/common/public.blade.php" afterPath="$PROJECT_DIR$/pets/resources/views/admin/common/public.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/resources/assets/js/router/routes.js" afterPath="$PROJECT_DIR$/pets/resources/assets/js/router/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/routes/api.php" afterPath="$PROJECT_DIR$/pets/routes/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/routes/web.php" afterPath="$PROJECT_DIR$/pets/routes/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pets/webpack.mix.js" afterPath="$PROJECT_DIR$/pets/webpack.mix.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,44 +35,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="public.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pets/resources/views/admin/common/public.blade.php">
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/router/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pets/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-Laravel-SPA/resources/assets/js/components/customers/View.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="138" column="33" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="33" />
+            <state relative-caret-position="365">
+              <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
               <folding>
-                <element signature="e#4906#4929#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pets/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,8 +70,18 @@
       <file leaf-file-name="Edit.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="-1623">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -112,51 +90,46 @@
       <file leaf-file-name="PetsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/PetsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="156" column="48" lean-forward="true" selection-start-line="156" selection-start-column="48" selection-end-line="156" selection-end-column="48" />
+            <state relative-caret-position="747">
+              <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreatmentRecord.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pets/app/Model/TreatmentRecord.php">
+      <file leaf-file-name="Index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/category/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pets.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pets/app/Model/Pets.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="15" column="103" lean-forward="true" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/router/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="128">
+              <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="80" lean-forward="false" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="e#5047#5070#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageNavigation.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/common/PageNavigation.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,6 +166,8 @@
       <find>provider</find>
       <find>_showStorePetsModal</find>
       <find>storePetsModal</find>
+      <find>_storePet</find>
+      <find>_storeTreatment</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth</dir>
@@ -204,12 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pets/database/db.sql" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/user/Index.vue" />
-        <option value="$PROJECT_DIR$/pets/storage/framework/cache/data/db/59/db59a863cb50aaccca0c973c049bd67971a7e3ae" />
-        <option value="$PROJECT_DIR$/pets/config/app.php" />
-        <option value="$PROJECT_DIR$/pets/fronted/vue.config.js" />
-        <option value="$PROJECT_DIR$/pets/fronted/package.json" />
         <option value="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Store.vue" />
         <option value="$PROJECT_DIR$/pets/resources/assets/js/vendor/jquery-3.3.1.min.js" />
         <option value="$PROJECT_DIR$/pets/public/js/app.js" />
@@ -217,12 +186,10 @@
         <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/Alert.vue" />
         <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Api/CategoryController.php" />
         <option value="$PROJECT_DIR$/pets/app/Model/Category.php" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/category/Index.vue" />
         <option value="$PROJECT_DIR$/pets/resources/assets/js/api/routes.js" />
         <option value="$PROJECT_DIR$/pets/package.json" />
         <option value="$PROJECT_DIR$/pets/resources/assets/js/router/index.js" />
         <option value="$PROJECT_DIR$/pets/resources/views/admin/pets/detail.blade.php" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue" />
         <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/Index.vue" />
         <option value="$PROJECT_DIR$/pets/resources/views/admin/pets/index.blade.php" />
         <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/HeaderCop.vue" />
@@ -236,7 +203,6 @@
         <option value="$PROJECT_DIR$/larticles_vue_app/.env" />
         <option value="$PROJECT_DIR$/pets/resources/views/admin/common/public.blade.php" />
         <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/Head.vue" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/HeadCom.vue" />
         <option value="$PROJECT_DIR$/pets/app/Model/User.php" />
         <option value="$PROJECT_DIR$/pets/config/auth.php" />
         <option value="$PROJECT_DIR$/pets/app/Http/Kernel.php" />
@@ -244,17 +210,26 @@
         <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Admin/CategoryController.php" />
         <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Admin/PetsController.php" />
         <option value="$PROJECT_DIR$/pets/app/Providers/RouteServiceProvider.php" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/login/Index.vue" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue" />
         <option value="$PROJECT_DIR$/pets/routes/web.php" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue" />
-        <option value="$PROJECT_DIR$/pets/routes/api.php" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/router/routes.js" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/login/Index.vue" />
         <option value="$PROJECT_DIR$/pets/app/Model/Pets.php" />
-        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue" />
-        <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Api/PetsController.php" />
+        <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Api/TreatmentRecord.php" />
         <option value="$PROJECT_DIR$/pets/app/Model/TreatmentRecord.php" />
+        <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Api/TreatmentRecordController.php" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/FooterCom.vue" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/HeadCom.vue" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Api/UserController.php" />
+        <option value="$PROJECT_DIR$/pets/routes/api.php" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/user/Index.vue" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/router/routes.js" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/common/PageNavigation.vue" />
+        <option value="$PROJECT_DIR$/pets/app/Http/Controllers/Api/PetsController.php" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/category/Index.vue" />
+        <option value="$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue" />
       </list>
     </option>
   </component>
@@ -265,15 +240,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/larticles_vue_app/node_modules" />
     <handled-path value="$PROJECT_DIR$/pets/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="384" />
-    <option name="y" value="36" />
-    <option name="width" value="1590" />
-    <option name="height" value="977" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -291,7 +263,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,43 +279,37 @@
               <item name="petsManSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="petsManSystem" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="petsManSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="petsManSystem" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="petsManSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="petsManSystem" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="petsManSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="petsManSystem" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="pets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Api" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="petsManSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="petsManSystem" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="router" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -353,13 +318,13 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pets/database" />
+      <recent name="$PROJECT_DIR$/pets/app/Model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/larticles_vue_app" />
       <recent name="$PROJECT_DIR$/Vue-Laravel-SPA" />
-      <recent name="$PROJECT_DIR$/pets/app/Model" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pets/database" />
       <recent name="$PROJECT_DIR$/pets/app/Model" />
     </key>
   </component>
@@ -387,34 +352,36 @@
       <updated>1532571882495</updated>
       <workItem from="1532571883972" duration="8305000" />
       <workItem from="1533023524342" duration="39997000" />
-      <workItem from="1533197997869" duration="17803000" />
+      <workItem from="1533197997869" duration="17896000" />
+      <workItem from="1533522156300" duration="23395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72366000" />
+    <option name="totallyTimeSpent" value="95854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20021299" sideWeight="0.49611652" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20234291" sideWeight="0.49611652" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5038835" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -450,88 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordResetServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBrokerManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-628">
-          <caret line="86" column="12" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="281" column="0" lean-forward="true" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-          <folding>
-            <element signature="e#35#47#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/GenericUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/GuardHelpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/larticles_vue_app/vendor/laravel/framework/src/Illuminate/Contracts/Auth/UserProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Contracts/Auth/UserProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/larticles_vue_app/vendor/laravel/framework/src/Illuminate/Auth/GenericUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="379" column="60" lean-forward="false" selection-start-line="379" selection-start-column="60" selection-end-line="379" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-73">
@@ -544,7 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="99" column="27" lean-forward="false" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -556,18 +440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pets/storage/logs/laravel.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-260707">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pets/config/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -575,7 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="88" column="33" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,7 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="38" column="53" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,7 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14">
           <caret line="261" column="7" lean-forward="true" selection-start-line="261" selection-start-column="7" selection-end-line="261" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,7 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -623,7 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="411" column="20" lean-forward="false" selection-start-line="411" selection-start-column="20" selection-end-line="411" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,21 +506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding>
-            <element signature="e#118#154#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/larticles_vue_app/resources/assets/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,14 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pets/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Admin/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -695,29 +546,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/login/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#22#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Laravel-SPA/resources/assets/js/components/MainApp.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,29 +575,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          <folding>
-            <element signature="e#278#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Laravel-SPA/resources/assets/js/components/customers/List.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
           <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,40 +593,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue-Laravel-SPA/resources/assets/js/components/customers/View.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="768">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/router/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pets/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="480">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -824,50 +615,212 @@
     <entry file="file://$PROJECT_DIR$/pets/resources/views/admin/common/public.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="138" column="33" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="33" />
-          <folding>
-            <element signature="e#4906#4929#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/pets/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-13296">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pets/app/Model/Pets.php">
+    <entry file="file://$PROJECT_DIR$/pets/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="15" column="103" lean-forward="true" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/PetsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="156" column="48" lean-forward="true" selection-start-line="156" selection-start-column="48" selection-end-line="156" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="321">
+          <caret line="1033" column="36" lean-forward="true" selection-start-line="1033" selection-start-column="36" selection-end-line="1033" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pets/app/Model/TreatmentRecord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="408">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/TreatmentRecordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="e#117#153#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/app/Model/Pets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="36" column="71" lean-forward="true" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/login/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/common/FooterCom.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-55">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/common/HeadCom.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/user/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Edit.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1623">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/common/PageNavigation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="20574" column="17" lean-forward="false" selection-start-line="20574" selection-start-column="17" selection-end-line="20574" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/app/Http/Controllers/Api/PetsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/category/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pets/resources/assets/js/components/pets/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="80" lean-forward="false" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#5047#5070#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

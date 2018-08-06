@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 class TreatmentRecord extends Model
 {
     protected $table = 'treatment_record';
-    protected $fillable = ['pets_id', 'next_treatment_time', 'created_at', 'treatment_time', '_extra'];
+    protected $fillable = ['pets_id', 'next_treatment_time', 'content', 'created_at', 'treatment_time', '_extra'];
 
     protected $hidden = ['updated_at'];
     public $timestamps = true;
