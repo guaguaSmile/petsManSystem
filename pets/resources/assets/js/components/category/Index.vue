@@ -3,7 +3,7 @@
         <div class="row"  style="margin: 10px 0px">
             <a class="btn btn-primary" href="javascript:;" id="btn-storePets" @click="_showStoreCategoryModal">添加</a>
             <input type="text" v-model="keyword" class="input" id="exampleInputName2" placeholder="分类名" style="margin: 0px 10px;">
-            <button type="submit" class="btn btn-primary" @click="_searchData">搜索</button>
+            <button type="submit" class="btn btn-primary" @click="_fetchData(1, keyword)">搜索</button>
         </div>
         <table class="table table-bordered">
             <thead>
@@ -23,12 +23,12 @@
                 <td>{{ mcate.created_at }}</td>
                 <td>
                     <a href="#" class="btn btn-primary">修改</a>
-                    <a href="javascript:;" class="btn btn-primary" @click="_delete(mcate.id)">删除</a>
+                    <a href="javascript:;" class="btn btn-warning" @click="_delete(mcate.id)">删除</a>
                 </td>
             </tr>
             </tbody>
         </table>
-        <page></page>
+        <page v-bind:count="count" v-on:_fetch-data="_fetchData"></page>
         <div class="modal" id="storeCategoryModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -73,17 +73,32 @@
                     pid: ''
                 },
                 keyword: '',
+                count: null,
             }
         },
         created() {
             this._fetchData()
         },
         methods: {
-            _fetchData() {
-                fetch('api/category')
+            _fetchData(page, keyword) {
+                var flag = 0;
+                var api = '/api/category';
+                if (page && page !== 'undefined') {
+                    api += '?page=' + page;
+                    flag++;
+                }
+                if (keyword) {
+                    if (flag >=1) {
+                        api += '&keyword='+keyword;
+                    } else {
+                        api += '?keyword='+keyword;
+                    }
+                }
+                fetch(api)
                     .then(res => res.json())
                     .then(res => {
                         this.mcategorys = res.data
+                        this.count = res.count
                     }).catch(err => {
                         console.log(err)
                 })

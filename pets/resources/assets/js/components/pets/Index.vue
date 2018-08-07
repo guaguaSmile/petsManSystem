@@ -37,7 +37,7 @@
             </tr>
             </tbody>
         </table>
-        <page v-bind:count="count" v-bind:api="api" v-on:_fetch-data="_fetchData"></page>
+        <page v-bind:count="count" v-on:_fetch-data="_fetchData"></page>
         <div class="modal" id="storePetsModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

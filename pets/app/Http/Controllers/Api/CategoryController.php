@@ -25,12 +25,22 @@ class CategoryController extends Controller
     public function getData()
     {
         $page = $this->request->input('page');
+        $hasKeyword = $this->request->input('keyword');
+        $query = $this->categoryModel->newQuery();
+        if ($hasKeyword) {
+            $query->where('name', 'like', '%'.$hasKeyword.'%');
+        }
         $limit = 10;
         $skip = ($page - 1) > 0 ? ($page - 1)*$limit : 0;
 
-        $categorys = $this->categoryModel->orderBy('id', 'desc')->skip($skip)->limit($limit)->get();
-
-        return response()->json(['data' => $categorys]);
+        $categorys = $query->orderBy('id', 'desc')
+            ->skip($skip)->limit($limit)->get();
+        $count = $query->count();
+        $count = $count/$limit > 0 ? ceil($count/$limit) : 0;
+        return response()->json([
+            'data' => $categorys,
+            'count' => $count
+        ]);
     }
 
     /**
