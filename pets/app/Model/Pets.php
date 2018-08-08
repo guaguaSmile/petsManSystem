@@ -22,7 +22,7 @@ class Pets extends Model
 
     public function category()
     {
-        return $this->belongsTo('App\Model\Category')
+        return $this->belongsTo('App\Model\Category', 'category_id', 'id')
             ->where('pid', null);
     }
 

@@ -39,7 +39,7 @@ class LoginController extends Controller
             return response()->json(['code' => 1, 'data'=>[], 'msg' => '用户不存在' ]);
         }
         // 设置登录状态为 bool=>true
-        session()->put('admin.login', true);
+        $this->request->session()->put('admin.login', true);
         return response()->json(['code' => 0, 'data' => [], 'msg' => '']);
     }
 

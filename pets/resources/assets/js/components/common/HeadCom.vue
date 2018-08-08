@@ -9,7 +9,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">通知</a></li>
-                        <li><a href="#">admin</a></li>
+                        <li><a href="#">{{ user.username }}</a></li>
                         <li><a href="javascript:;" @click="_logout">退出登录</a></li>
                     </ul>
                 </div>
@@ -21,12 +21,28 @@
 <script>
     export default {
         name: 'HeadCom',
+        data() {
+            return {
+                user: {
+                    username: '',
+                }
+            }
+        },
         mounted() {
             console.log('Component mounted.')
         },
+        created() {
+            this._getUserInfo()
+        },
         methods: {
+            _getUserInfo() {
+                fetch('/api/user/auth').then(res => res.json())
+                    .then(res => {
+                        this.user = res.data;
+                    })
+            },
             _logout() {
-                var self = this;
+//                var self = this;
                 axios.post('/api/logout')
                     .then(function(res) {
                         var code = res.code;
@@ -34,9 +50,9 @@
                         if (code !== 0) {
                             return alert(msg);
                         }
-                        window.location.href= '/';
                     })
-
+                localStorage.removeItem('logged');
+                this.$router.push({name: 'login'})
             }
         }
     }

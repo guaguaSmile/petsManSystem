@@ -23,7 +23,7 @@
             <tr v-for="pet in pets">
                 <th scope="row">{{ pet.id}}</th>
                 <td>{{ pet.name}}</td>
-                <td>{{ pet.category }}</td>
+                <td>{{ pet.category.name }}</td>
                 <td>{{ pet.color }}</td>
                 <td>{{ pet.gender }}</td>
                 <td>{{ pet.user }}</td>
@@ -46,44 +46,72 @@
                         <button type="button" style="padding: 0px 10px" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <div>
+                        <div class="form-horizontal" >
                             <div class="form-group">
-                                <label for="petName">宠物名*</label>
-                                <input type="text" required v-model="form.name" class="form-control" id="petName" placeholder="宠物名">
-                            </div>
-                            <div class="checkbox">
-                                <label for="petGender">
-                                    公：
-                                    <input type="radio" v-model="form.gender" id="petGender" value="1">
-                                </label>
-                                <label for="petGenderf">
-                                    母：
-                                    <input class="date" type="radio" v-model="form.gender" id="petGenderf" value="2">
-                                </label>
+                                <label for="petName" class="col-sm-2 control-label">宠物名*</label>
+                                <div class="col-sm-10">
+                                    <input type="text" required v-model="form.name" class="form-control" id="petName" placeholder="宠物名">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="petColor">颜色*</label>
-                                <input type="text" v-model="form.color" class="form-control" id="petColor">
+                                <label for="category" class="col-sm-2">分类</label>
+                                <div class="col-sm-4">
+                                    <select v-model="form.category" id="category" class="form-control">
+                                        <!--<select v-model="form.category" id="category" class="form-control" @change="_selectChange(form.category)">-->
+                                        <option value="">--</option>
+                                        <option v-for="category in categorys" v-bind:value="category.id" >{{ category.name }}</option>
+                                    </select>
+                                </div>
+
+                               <!-- <label for="subcategory" class="col-sm-2">子分类</label>
+                                <div class="col-sm-4">
+                                    <select v-model="form.subcategory" id="subcategory" class="form-control">
+                                        <option value="">&#45;&#45;</option>
+                                        <option value="subcategory.id" v-for="subcategory in subcategorys">{{ subcategory.name }}</option>
+                                    </select>
+                                </div>-->
                             </div>
                             <div class="form-group">
-                                <label for="user">宠物主*</label>
-                                <input type="text" v-model="form.user" class="form-control" id="user" placeholder="例如：张三(18298361111)">
+                                <div class="col-sm-offset-2">
+                                    <label for="petGender" class="radio-inline">
+                                        <input type="radio" name="gender" value="1" v-model="form.gender" id="petGender" class="">公
+                                    </label>
+                                    <label for="petGenderf" class="radio-inline">
+                                        <input type="radio" name="gender" value="2" v-model="form.gender" id="petGenderf" class="">母
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="petColor" class="col-sm-2">颜色*</label>
+                                <div class="col-sm-10">
+                                    <input type="text" v-model="form.color" id="petColor" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="user" class="col-sm-2">宠物主*</label>
+                                <div class="col-sm-10">
+                                    <input type="text" v-model="form.user" id="user" class="form-control" placeholder="例如：张三(18298361111)">
+                                </div>
                             </div>
 
-                            <hr/>
-                            <button class="btn btn-default" disabled>治疗信息</button>
-                            <br/>
+                            <h4 class="modal-title" style="padding: 0px 0px 10px 0px;margin-bottom:15px;border-bottom: 1px solid #e5e5e5">治疗信息</h4>
                             <div class="form-group">
-                                <label>治疗时间*</label>
-                                <date-picker v-model="form.treatment_time" :config="options"></date-picker>
+                                <label class="col-sm-2 col-form-label">治疗时间*</label>
+                                <div class="col-sm-10">
+                                    <date-picker v-model="form.treatment_time" :config="options" class="form-control"></date-picker>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>下次治疗时间*</label>
-                                <date-picker v-model="form.next_treatment_time" :config="options"></date-picker>
+                                <label class="col-sm-2">下次治疗时间*</label>
+                                <div class="col-sm-10">
+                                    <date-picker v-model="form.next_treatment_time" :config="options" class="form-control"></date-picker>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>治疗内容*</label>
-                                <textarea v-model="form.content" class="form-control"></textarea>
+                                <label class="col-sm-2">治疗内容*</label>
+                                <div class="col-sm-10">
+                                    <textarea v-model="form.content" class="form-control"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -109,7 +137,8 @@
         data() {
             return {
                 pets: [],
-                category: [],
+                categorys: [],
+                subcategorys: [],
                 options: {
                     format: 'YYYY-MM-DD',
                     useCurrent: false,
@@ -122,6 +151,8 @@
                     next_treatment_time: new Date(),
                     treatment_time: new Date(),
                     content: '',
+                    category: '',
+                    subcategory: '',
                 },
                 count: null,
                 api: 'pets',
@@ -135,6 +166,9 @@
             this.init()
         },
         computed: {
+
+        },
+        watch: {
 
         },
         methods: {
@@ -158,16 +192,18 @@
                 }
                 fetch(api).then(res => res.json())
                     .then(res => {
-                        console.log(this)
-                        console.log(self);
                         this.$data.pets = res.pets
-                        this.$data.category = res.category
                         this.$data.count = res.count
                     })
-//                console.log(this)
             },
             _showStorePetsModal() {
                 $('#storePetsModal').modal()
+                // 获取分类父级
+                var api = '/api/category/parent';
+                fetch(api).then(res => res.json())
+                    .then(res => {
+                        this.categorys = res.data
+                    })
             },
             _storePet() {
                 if (!this.form.name) {
@@ -221,6 +257,20 @@
                     }, 0)
                 })
 
+            },
+            _selectChange(val) {
+                // 当前值与form值不一致，获取子分类
+                if (val !== this.form.category) {
+                    var api = '/api/category/sub';
+                    axios.post(api,{id:val}).then(function (response) {
+                        var code = response.code;
+                        var msg = response.msg;
+                        if (code !== 0) {
+                            return alert(msg);
+                        }
+                        this.subcategorys = response.data;
+                    })
+                }
             },
             init() {
             }

@@ -1,7 +1,7 @@
 <template>
     <div class="main">
-        <headCom></headCom>
-        <siderBar></siderBar>
+        <headCom v-if="is_login"></headCom>
+        <siderBar v-if="is_login"></siderBar>
         <div class="content">
             <router-view></router-view>
         </div>
@@ -13,19 +13,23 @@
     import headCom from './common/HeadCom.vue';
     import footerCom from './common/FooterCom.vue';
     import siderBar from './common/SiderBar.vue';
-    import login from './login/Index.vue';
     export default {
         name: 'index',
         data: function () {
             return {
-                is_login: login.is_login
+                is_login: false,
+            }
+        },
+        created() {
+            var isLogin = localStorage.getItem('logged');
+            if (isLogin) {
+                this.is_login = true;
             }
         },
         components: {
             headCom,
             footerCom,
             siderBar,
-            login
         }
     }
 </script>

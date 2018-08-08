@@ -13,6 +13,7 @@ use App\Model\Pets;
 use App\Model\Category;
 use App\Model\TreatmentRecord;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Mockery\Exception;
@@ -30,6 +31,7 @@ class PetsController extends Controller
 
     public function getData()
     {
+//        print_r(Auth::user());die;
         $query = Pets::query();
         $hasKeyword = $this->request->has('keyword');
         $hasCategory = $this->request->has('category');
@@ -43,14 +45,14 @@ class PetsController extends Controller
             $query->where('name', 'like', '%' . $keyword . '%')
                 ->orWhere('gender', $keyword);
         }
-        if ($hasCategory) {
+       /* if ($hasCategory) {
             $category = $this->request->input('category');
             $query->with(['category' => function ($sub) use ($category) {
                 return $sub->where('id', $category);
             }]);
-        }
+        }*/
         $category = Category::all();
-        $pets = $query->with(['treatment'])->skip($skip)->limit($limit)->get();
+        $pets = $query->with(['treatment', 'category'])->skip($skip)->limit($limit)->get();
         $count = ceil($query->count()/$limit);
         $count = ($count <= 0)? 1 : $count;
         return response()->json([
@@ -70,7 +72,7 @@ class PetsController extends Controller
         $nextTreatmentTime = $this->request->input('next_treatment_time');
         $treatmentTime = $this->request->input('treatment_time');
         $user = $this->request->input('user');
-        $categoryId = $this->request->input('category_id');
+        $categoryId = $this->request->input('category');
 
         $time = date('Y-m-d H:i:s');
         $treatmentRecordModel = new TreatmentRecord();

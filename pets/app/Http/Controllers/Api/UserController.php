@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Model\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
@@ -22,7 +23,15 @@ class UserController extends Controller
         $this->requet = $request;
         $this->userModel = new User();
     }
+    public function auth()
+    {
+        if (!Auth::check()) {
+            return response()->json(['code'=>1, 'data'=>[], 'msg'=>'']);
+        }
+        $user = Auth::user();
 
+        return response()->json(['code'=>0, 'data'=>$user->toArray(), 'msg'=>'']);
+    }
     public function getData()
     {
         $page = $this->requet->input('page');

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue study</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+        <span v-bind:title="date" style="display: inline-block;padding: 10px">悬停看下
+            (v-bind指令:将该元素的属性与date属性保持一致)
+        </span>
+        <p v-if="seen === 1">v-if判断显示
+            (v-if="true" || v-if="a===a")
+        </p>
+        <ul>
+            <span>v-for循环
+                (for循环指令)
+            </span>
+            <li v-for="list in lists">
+                <input type="text" v-bind:value="list.id" > {{ list.name }}
+                <button @click="list.id +=1">add</button>
+            </li>
+        </ul>
+        <p>
+            (v-model: 与表单的数据双向绑定)
+            <input type="text" v-model="vmodel" title="v-model数据双向绑定">
+            <span>{{ vmodel }}</span>
+        </p>
+            <span>
+                (向子组件传递数据时，需要在子组件props定义要接受的数据名,
+                用v-bind绑定数据名
+                )
+            </span>
+            <to-item v-for="prop in propsData" v-bind:prop="prop"></to-item>
+        </p>
+        <p>
+            也有一些其它的钩子，在实例生命周期的不同阶段被调用，
+            如 mounted、updated 和 destroyed。生命周期钩子的 this 上下文指向调用它的 Vue 实例。
+        </p>
+        <p>created函数钩子，vue实例创建后执行的方法</p>
+        <p v-bind:id="id">v-bind绑定null，false,undefined值，该id属性不会被渲染wow</p>
+
+    </div>
+    <button v-bind:disabled="isButtonDisabled">Button</button>
+    <p>
+        {{ reversedMessage() }}
+        对模板文本的计算属性应该放在computed:属性下
+        <button @click="reversedMessage()">翻转</button>
+    </p>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('to-item', {
+        props: [
+            'prop'
+        ],
+        template: '<li>{{ prop.text }}</li>',
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello world',
+            date: new Date().toLocaleString(),
+//            seen: true,
+            seen: 1,
+            lists: [
+                {id: 1, name: 'guagua'},
+                {id: 2, name: 'dudu'},
+                {id: 3, name: 'didi'},
+                {id: 4, name: 'dydy'},
+            ],
+            propsData: [
+                { id: 0, text: '蔬菜' },
+                { id: 1, text: '奶酪' },
+                { id: 2, text: '随便其它什么人吃的东西' }
+            ],
+            vmodel: 'v-model data',
+            id: true,
+            isButtonDisabled: 'disabled',
+
+        },
+        created() {
+
+        },
+        methods: {
+
+        },
+        computed: {
+            // reversed 匿名函数提供给getter 函数做回调
+            reversedMessage: function () {
+                console.log(111);
+                return this.message.split('').reverse().join('');
+            }
+        }
+    });
+</script>
+</body>
+</html>

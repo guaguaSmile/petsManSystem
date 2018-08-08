@@ -84,4 +84,20 @@ class CategoryController extends Controller
 
         return response()->json(['code'=>0, 'data'=>[], 'msg'=>'']);
     }
+
+    public function getParentCategory()
+    {
+        $categorys = $this->categoryModel->getParentCategory();
+
+        return response()->json(['code'=>0, 'data'=>$categorys->toArray(), 'msg'=>'']);
+    }
+
+    public function getSubCategory()
+    {
+        $id = $this->request->input('id');
+
+        $subCategorys = $this->categoryModel->getSubCategoryById($id);
+        return response()->json(['code'=>0, 'data'=>$subCategorys, 'msg'=>'']);
+    }
+
 }

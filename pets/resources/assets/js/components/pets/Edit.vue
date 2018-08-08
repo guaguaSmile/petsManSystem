@@ -15,11 +15,13 @@
             <div class="checkbox">
                 <label for="petGender">
                     公：
-                    <input type="radio"  name="gender"  v-bind:value="form.gender" id="petGender" value="1">
+                    <input type="radio" name="gender" value="1" v-if="form.gender === 1" checked="checked"  v-model="form.gender" id="petGender" >
+                    <input type="radio" name="gender" value="1" v-else="form.gender !== 1"  v-model="form.gender" >
                 </label>
                 <label for="petGenderf">
                     母：
-                    <input type="radio" name="gender"  v-bind:value="form.gender" id="petGenderf" value="2">
+                    <input type="radio" name="gender" value="2" v-if="form.gender === 2" checked="checked" v-model="form.gender" id="petGenderf" >
+                    <input type="radio" name="gender" value="2" v-else="form.gender !== 2" v-model="form.gender" >
                 </label>
             </div>
             <div class="form-group">
@@ -128,7 +130,6 @@
         },
         methods: {
             _fetchData() {
-                var self = this;
                 fetch("/api/pets/"+this.$route.params.id+"/edit")
                     .then(res => res.json())
                     .then(res => {
@@ -161,6 +162,8 @@
                 if (!this.form.content) {
                     return alert('请填写内容');
                 }
+                var self = this;
+//                console.log(this)
                 axios.post('/api/pets/'+this.$route.params.id+'/edit', this.form)
                     .then(function(response) {
                         var code = response.code;
@@ -168,10 +171,9 @@
                         if (code !== 0) {
                             return alert(msg);
                         }
+                        console.log(this);
                         alert('修改成功');
-                       /* setTimeout(() => {
-                            window.location.href="/pets";
-                        }, 0)*/
+                        self.$router.push({name: 'pets'});
                     })
                     .catch(function (e) {
 

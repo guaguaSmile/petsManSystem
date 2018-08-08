@@ -23,4 +23,14 @@ class Category extends Model
     {
         return $this->where('pid', null)->get();
     }
+
+    public function getParentCategory()
+    {
+        return $this->where('pid', null)->get();
+    }
+
+    public function getSubCategoryById($id)
+    {
+        return $this->where('pid', $id)->get();
+    }
 }
